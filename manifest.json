@@ -1,7 +1,7 @@
 {
   "id": "nux-exporter",
   "name": "Nux Exporter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minAppVersion": "1.5.0",
   "description": "Consolidate a vault or folder into structured Markdown optimized for AI.",
   "author": "Jason Quesada",

@@ -6,7 +6,6 @@ export interface MarkdownScanOptions {
 }
 
 export const DEFAULT_IGNORED_FOLDER_NAMES: ReadonlySet<string> = new Set([
-	".obsidian",
 	".git",
 	".trash",
 	"node_modules",
@@ -25,7 +24,7 @@ export class MarkdownScanner {
 			.filter(
 				(file) =>
 					this.isWithinRoot(file, options.rootPath) &&
-					!this.isIgnored(file) &&
+					!this.isIgnored(file, vault.configDir) &&
 					file.path !== options.outputPath &&
 					!this.isGeneratedExport(file, vault.getName())
 			)
@@ -43,7 +42,11 @@ export class MarkdownScanner {
 		return file.name === `${scopeName}_AI.md`;
 	}
 
-	private isIgnored(file: TFile): boolean {
+	private isIgnored(file: TFile, configDir: string): boolean {
+		if (file.path.startsWith(`${configDir}/`)) {
+			return true;
+		}
+
 		return this.parentFolders(file.path).some((folder) =>
 			this.ignoredFolderNames.has(folder)
 		);

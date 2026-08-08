@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2026-08-08
+
+### Fixed
+
+- Detect the active Obsidian configuration directory through `Vault.configDir` instead of assuming it is named `.obsidian`.
+
 ## [0.1.0] - 2026-08-08
 
 ### Added

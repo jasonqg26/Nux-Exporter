@@ -1,6 +1,6 @@
 {
   "name": "nux-exporter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Consolidate an Obsidian vault or folder into structured Markdown optimized for AI.",
   "keywords": [
     "obsidian",

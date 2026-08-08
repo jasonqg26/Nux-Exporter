@@ -19,7 +19,7 @@ Nux Exporter is an open-source Obsidian plugin that consolidates a complete vaul
 
 The following folders are excluded by default:
 
-- `.obsidian`
+- The active Obsidian configuration directory (`Vault.configDir`).
 - `.git`
 - `.trash`
 - `node_modules`
