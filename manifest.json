@@ -1,0 +1,10 @@
+{
+  "id": "nux-exporter",
+  "name": "Nux Exporter",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Export Obsidian content through a clean and extensible workflow.",
+  "author": "Nux Exporter contributors",
+  "isDesktopOnly": false
+}
+

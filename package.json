@@ -1,0 +1,35 @@
+{
+  "name": "nux-exporter",
+  "version": "0.1.0",
+  "description": "An Obsidian plugin for exporting notes with a clean, extensible architecture.",
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "export"
+  ],
+  "license": "MIT",
+  "author": "Nux Exporter contributors",
+  "main": "main.js",
+  "files": [
+    "main.js",
+    "manifest.json",
+    "styles.css"
+  ],
+  "scripts": {
+    "dev": "node esbuild.config.mjs --watch",
+    "build": "node esbuild.config.mjs --production",
+    "check": "tsc --noEmit",
+    "version": "node version-bump.mjs"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "obsidian": "latest",
+    "tslib": "^2.8.0",
+    "typescript": "^5.7.0"
+  }
+}
