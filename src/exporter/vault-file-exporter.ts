@@ -6,15 +6,14 @@ export class VaultFileExporter {
 		const existingFile = vault.getAbstractFileByPath(outputPath);
 
 		if (existingFile instanceof TFile) {
-			await vault.modify(existingFile, content);
+			await vault.process(existingFile, () => content);
 			return;
 		}
 
 		if (existingFile) {
-			throw new Error(`No se puede escribir la exportación en "${outputPath}".`);
+			throw new Error(`Cannot write the export to "${outputPath}".`);
 		}
 
 		await vault.create(outputPath, content);
 	}
 }
-

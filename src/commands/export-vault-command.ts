@@ -11,11 +11,11 @@ export function registerExportVaultCommand(plugin: Plugin): void {
 		try {
 			const result = await exportOperation();
 			new Notice(
-				`Exportación creada: ${result.outputPath} (${result.statistics.documents} documentos)`
+				`Export created: ${result.outputPath} (${result.statistics.documents} documents)`
 			);
 		} catch (error) {
 			console.error("Nux Exporter: export failed", error);
-			new Notice("No se pudo crear la exportación. Revisa la consola para más detalles.");
+			new Notice("Export failed. Check the developer console for details.");
 		}
 	};
 
@@ -33,7 +33,7 @@ export function registerExportVaultCommand(plugin: Plugin): void {
 
 			menu.addItem((item) => {
 				item
-					.setTitle("Exportar carpeta con Nux Exporter")
+					.setTitle("Export folder as consolidated documentation")
 					.setIcon("file-output")
 					.onClick(() =>
 						runExport(() => exportService.exportFolder(plugin.app.vault, file))

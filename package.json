@@ -1,14 +1,22 @@
 {
   "name": "nux-exporter",
   "version": "0.1.0",
-  "description": "An Obsidian plugin for exporting notes with a clean, extensible architecture.",
+  "description": "Consolidate an Obsidian vault or folder into structured Markdown optimized for AI.",
   "keywords": [
     "obsidian",
     "obsidian-plugin",
     "export"
   ],
   "license": "MIT",
-  "author": "Nux Exporter contributors",
+  "author": "Jason Quesada",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonqg26/Nux-Exporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jasonqg26/Nux-Exporter/issues"
+  },
+  "homepage": "https://github.com/jasonqg26/Nux-Exporter#readme",
   "main": "main.js",
   "files": [
     "main.js",

@@ -8,9 +8,8 @@ export class MarkdownLoader {
 		return Promise.all(
 			files.map(async (file) => ({
 				file,
-				content: await vault.read(file)
+				content: await vault.cachedRead(file)
 			}))
 		);
 	}
 }
-

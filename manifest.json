@@ -3,8 +3,8 @@
   "name": "Nux Exporter",
   "version": "0.1.0",
   "minAppVersion": "1.5.0",
-  "description": "Export Obsidian content through a clean and extensible workflow.",
-  "author": "Nux Exporter contributors",
+  "description": "Consolidate a vault or folder into structured Markdown optimized for AI.",
+  "author": "Jason Quesada",
+  "authorUrl": "https://github.com/jasonqg26",
   "isDesktopOnly": false
 }
-

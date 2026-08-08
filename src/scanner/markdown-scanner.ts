@@ -38,7 +38,7 @@ export class MarkdownScanner {
 
 	private isGeneratedExport(file: TFile, vaultName: string): boolean {
 		const folders = this.parentFolders(file.path);
-		const scopeName = folders.at(-1) ?? vaultName;
+		const scopeName = folders.length > 0 ? folders[folders.length - 1] : vaultName;
 
 		return file.name === `${scopeName}_AI.md`;
 	}
